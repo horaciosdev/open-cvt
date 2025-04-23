@@ -13,15 +13,15 @@
           },
           "createdAt": {
             "type": "string",
-            "format": "date-time",
+            "format": "date",
             "description": "Creation date and time of the curriculum",
-            "examples": ["2024-04-15T16:41:14-03:00"]
+            "examples": ["2024-04-15"]
           },
           "updatedAt": {
             "type": "string",
-            "format": "date-time",
+            "format": "date",
             "description": "Last update date and time of the curriculum (optional)",
-            "examples": ["2025-04-16T10:32:00-03:00"]
+            "examples": ["2025-04-16"]
           },
           "language": {
             "type": "string",
@@ -147,15 +147,15 @@
             },
             "startDate": {
               "type": "string",
-              "format": "date-time",
+              "format": "date",
               "description": "Start date of the job",
-              "examples": ["2020-06-15T00:00:00-03:00"]
+              "examples": ["2020-06-15"]
             },
             "endDate": {
               "type": ["string", "null"],
-              "format": "date-time",
+              "format": "date",
               "description": "End date of the job (null for current position)",
-              "examples": ["2023-12-31T23:59:59-03:00", null]
+              "examples": ["2023-12-31", null]
             },
             "highlights": {
               "type": "array",
@@ -195,15 +195,15 @@
             },
             "startDate": {
               "type": "string",
-              "format": "date-time",
+              "format": "date",
               "description": "Start date of the educational program",
-              "examples": ["2018-02-01T00:00:00-03:00"]
+              "examples": ["2018-02-01"]
             },
             "endDate": {
               "type": ["string", "null"],
-              "format": "date-time",
+              "format": "date",
               "description": "End date of the educational program",
-              "examples": ["2021-12-31T23:59:59-03:00", null]
+              "examples": ["2021-12-31", null]
             },
             "courses": {
               "type": "array",
@@ -236,9 +236,9 @@
             },
             "date": {
               "type": "string",
-              "format": "date-time",
+              "format": "date",
               "description": "Date of certification",
-              "examples": ["2021-09-15T00:00:00-03:00"]
+              "examples": ["2021-09-15"]
             },
             "url": {
               "type": "string",
@@ -291,15 +291,15 @@
             },
             "startDate": {
               "type": "string",
-              "format": "date-time",
+              "format": "date",
               "description": "Start date of the volunteer work",
-              "examples": ["2020-06-15T00:00:00-03:00"]
+              "examples": ["2020-06-15"]
             },
             "endDate": {
               "type": ["string", "null"],
-              "format": "date-time",
+              "format": "date",
               "description": "End date of the volunteer work (null for current position)",
-              "examples": ["2023-12-31T23:59:59-03:00", null]
+              "examples": ["2023-12-31", null]
             },
             "highlights": {
               "type": "array",
@@ -322,9 +322,9 @@
             },
             "date": {
               "type": "string",
-              "format": "date-time",
+              "format": "date",
               "description": "Award date",
-              "examples": ["2021-09-15T00:00:00-03:00"]
+              "examples": ["2021-09-15"]
             },
             "awarder": {
               "type": "string",
@@ -349,9 +349,9 @@
             },
             "releaseDate": {
               "type": "string",
-              "format": "date-time",
+              "format": "date",
               "description": "Release date",
-              "examples": ["2021-09-15T00:00:00-03:00"]
+              "examples": ["2021-09-15"]
             },
             "url": {
               "type": "string",

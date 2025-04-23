@@ -1,8 +1,8 @@
 {
   "meta": {
     "formatVersion": "1.0.0",
-    "createdAt": "2024-04-15T16:41:14-03:00",
-    "updatedAt": "2025-04-16T10:32:00-03:00",
+    "createdAt": "2024-04-15",
+    "updatedAt": "2025-04-16",
     "language": "pt"
   },
   "basics": {
@@ -39,7 +39,7 @@
       "organization": "Empresa Exemplo S.A.",
       "position": "Desenvolvedor Frontend",
       "url": "https://empresaexemplo.com",
-      "startDate": "2022-01-01T00:00:00-03:00",
+      "startDate": "2022-01-01",
       "endDate": null,
       "highlights": [
         "Implementação de interface de busca por imagem usando Next.js e TypeScript",
@@ -53,8 +53,8 @@
       "institution": "Universidade Federal do Rio de Janeiro",
       "studyType": "Bachelor",
       "area": "Ciência da Computação",
-      "startDate": "2018-02-01T00:00:00-03:00",
-      "endDate": "2021-12-01T23:59:59-03:00",
+      "startDate": "2018-02-01",
+      "endDate": "2021-12-01",
       "courses": [
         "CS101 - Introdução à Programação",
         "CS201 - Estruturas de Dados e Algoritmos",
@@ -67,7 +67,7 @@
     {
       "name": "AWS Certified Solutions Architect",
       "issuer": "Amazon Web Services",
-      "date": "2021-09-01T00:00:00-03:00",
+      "date": "2021-09-01",
       "url": "https://aws.amazon.com/certification"
     }
   ],
@@ -87,7 +87,7 @@
     {
       "organization": "ONG Exemplo",
       "position": "Coordenador de Voluntários",
-      "startDate": "2023-01-01T00:00:00-03:00",
+      "startDate": "2023-01-01",
       "endDate": null,
       "highlights": [
         "Organização de eventos comunitários para arrecadação de doações",
@@ -98,7 +98,7 @@
   "awards": [
     {
       "title": "Colaborador do Ano",
-      "date": "2023-12-01T00:00:00-03:00",
+      "date": "2023-12-01",
       "awarder": "Grupo Imobiliário"
     }
   ],
@@ -106,7 +106,7 @@
     {
       "name": "Melhores Práticas em Frontend",
       "publisher": "Tech Publishing",
-      "releaseDate": "2024-03-01T00:00:00-03:00",
+      "releaseDate": "2024-03-01",
       "url": "https://techpublishing.com/publication"
     }
   ],
