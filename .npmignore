@@ -1,0 +1,35 @@
+# TypeScript source files
+src/
+test/
+
+# Configuration files
+.gitignore
+tsconfig.json
+jest.config.js
+
+# Development and git files
+.git/
+.github/
+.vscode/
+.idea/
+
+# Dependency directories
+node_modules/
+
+# Logs
+*.log
+
+# Environment files
+.env
+.env.local
+
+# Markdown and documentation
+*.md
+NOTES.md
+CONTRIBUTING.md
+
+# Build and temporary files
+*.tgz
+*.orig
+.DS_Store
+.tmp

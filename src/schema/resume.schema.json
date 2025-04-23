@@ -1,0 +1,404 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+      "meta": {
+        "type": "object",
+        "properties": {
+          "formatVersion": {
+            "type": "string",
+            "pattern": "^\\d+\\.\\d+\\.\\d+$",
+            "description": "Schema version (semantic versioning)",
+            "examples": ["1.0.0", "3.1.2"]
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Creation date and time of the curriculum",
+            "examples": ["2024-04-15T16:41:14-03:00"]
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Last update date and time of the curriculum (optional)",
+            "examples": ["2025-04-16T10:32:00-03:00"]
+          },
+          "language": {
+            "type": "string",
+            "pattern": "^[a-z]{2}$",
+            "description": "Primary content language (ISO 639-1)",
+            "examples": ["pt", "en", "es"]
+          }
+        },
+        "required": ["formatVersion", "createdAt"],
+        "additionalProperties": true
+      },
+      "basics": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Full name of the professional",
+            "examples": ["Maria Oliveira Silva", "João Pedro Santos"]
+          },
+          "label": {
+            "type": "string",
+            "description": "Professional title or job role",
+            "examples": ["Senior Software Architect", "Frontend Developer", "Data Scientist"]
+          },
+          "image": {
+            "type": "string",
+            "format": "uri",
+            "description": "URL to profile picture (optional)",
+            "examples": ["https://example.com/profile.jpg", "https://linkedin.com/photo/johndoe"]
+          },
+          "summary": {
+            "type": "string",
+            "description": "Professional summary or brief bio",
+            "examples": [
+              "Experienced software engineer with 10+ years in cloud architecture and microservices design",
+              "Passionate frontend developer specializing in React and TypeScript"
+            ]
+          },
+          "identifiers": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "type": "string",
+                  "description": "ID type (suggestions: CPF, CNPJ, Passport, SSN, NIN, etc). Example: 'CPF'"
+                },
+                "value": {
+                  "type": "string",
+                  "description": "ID value. Example: '123.456.789-09'"
+                }
+              },
+              "required": ["type", "value"]
+            }
+          },
+          "location": {
+            "type": "object",
+            "properties": {
+              "address": {
+                "type": "string",
+                "description": "Street address (optional). Example: 'Avenida Paulista, 1000'"
+              },
+              "city": {
+                "type": "string",
+                "description": "City. Example: 'Rio de Janeiro'"
+              },
+              "region": {
+                "type": "string",
+                "description": "State/Province/Region. Example: 'RJ'"
+              },
+              "countryCode": {
+                "type": "string",
+                "pattern": "^[A-Z]{2}$",
+                "description": "Country code (ISO 3166). Example: 'BR'"
+              }
+            },
+            "required": ["city", "countryCode"]
+          },
+          "profiles": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "network": {
+                  "type": "string",
+                  "description": "Platform name (suggestions: LinkedIn, GitHub, Lattes, Twitter, Stack Overflow, etc). Example: 'LinkedIn'"
+                },
+                "url": {
+                  "type": "string",
+                  "format": "uri",
+                  "description": "Profile URL. Example: 'http://linkedin.com/in/example'"
+                },
+                "username": {
+                  "type": "string",
+                  "description": "Username (optional). Example: 'maria-dev'"
+                }
+              },
+              "required": ["network", "url"]
+            }
+          }
+        },
+        "required": ["name", "summary", "location", "profiles"]
+      },
+      "work": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "organization": {
+              "type": "string",
+              "description": "Company or organization name",
+              "examples": ["Google", "Startup Tech Inc.", "Global Consulting"]
+            },
+            "position": {
+              "type": "string",
+              "description": "Job title or role",
+              "examples": ["Senior Software Engineer", "Product Manager", "UX Designer"]
+            },
+            "url": {
+              "type": "string",
+              "format": "uri",
+              "description": "Company URL (optional). Example: 'https://company.com'"
+            },
+            "startDate": {
+              "type": "string",
+              "format": "date-time",
+              "description": "Start date of the job",
+              "examples": ["2020-06-15T00:00:00-03:00"]
+            },
+            "endDate": {
+              "type": ["string", "null"],
+              "format": "date-time",
+              "description": "End date of the job (null for current position)",
+              "examples": ["2023-12-31T23:59:59-03:00", null]
+            },
+            "highlights": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "description": "Key achievements or responsibilities",
+                "examples": [
+                  "Led development of microservices architecture",
+                  "Reduced application load time by 40%"
+                ]
+              }
+            }
+          },
+          "required": ["organization", "position", "startDate"],
+          "additionalProperties": true
+        }
+      },
+      "education": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "institution": {
+              "type": "string",
+              "description": "Name of educational institution",
+              "examples": ["Universidade Federal do Rio de Janeiro", "Stanford University"]
+            },
+            "studyType": {
+              "type": "string",
+              "description": "Type of degree or educational program",
+              "examples": ["Bachelor", "Master", "PhD", "Certificate"]
+            },
+            "area": {
+              "type": "string",
+              "description": "Field of study",
+              "examples": ["Computer Science", "Software Engineering", "Data Science"]
+            },
+            "startDate": {
+              "type": "string",
+              "format": "date-time",
+              "description": "Start date of the educational program",
+              "examples": ["2018-02-01T00:00:00-03:00"]
+            },
+            "endDate": {
+              "type": ["string", "null"],
+              "format": "date-time",
+              "description": "End date of the educational program",
+              "examples": ["2021-12-31T23:59:59-03:00", null]
+            },
+            "courses": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "score": {
+              "type": ["string", "number"],
+              "description": "Academic score or GPA"
+            }
+          },
+          "required": ["institution", "studyType", "area", "startDate"]
+        }
+      },
+      "certifications": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "Name of the certification",
+              "examples": ["AWS Certified Solutions Architect", "Google Cloud Professional"]
+            },
+            "issuer": {
+              "type": "string",
+              "description": "Organization that issued the certification",
+              "examples": ["Amazon Web Services", "Google Cloud", "Microsoft"]
+            },
+            "date": {
+              "type": "string",
+              "format": "date-time",
+              "description": "Date of certification",
+              "examples": ["2021-09-15T00:00:00-03:00"]
+            },
+            "url": {
+              "type": "string",
+              "format": "uri",
+              "description": "Certification URL"
+            }
+          },
+          "required": ["name", "issuer", "date"]
+        }
+      },
+      "skills": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "Name of the skill",
+              "examples": ["React", "Python", "Cloud Architecture"]
+            },
+            "category": {
+              "type": "string",
+              "description": "Category of the skill",
+              "examples": ["hard", "soft", "technical", "management"]
+            },
+            "keywords": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "description": "Specific technologies or sub-skills",
+                "examples": ["TypeScript", "Kubernetes", "Leadership"]
+              }
+            }
+          },
+          "required": ["name"]
+        }
+      },
+      "volunteer": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "organization": {
+              "type": "string",
+              "description": "Organization name"
+            },
+            "position": {
+              "type": "string",
+              "description": "Volunteer position"
+            },
+            "startDate": {
+              "type": "string",
+              "format": "date-time",
+              "description": "Start date of the volunteer work",
+              "examples": ["2020-06-15T00:00:00-03:00"]
+            },
+            "endDate": {
+              "type": ["string", "null"],
+              "format": "date-time",
+              "description": "End date of the volunteer work (null for current position)",
+              "examples": ["2023-12-31T23:59:59-03:00", null]
+            },
+            "highlights": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          "required": ["organization", "position", "startDate"]
+        }
+      },
+      "awards": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "title": {
+              "type": "string",
+              "description": "Award title"
+            },
+            "date": {
+              "type": "string",
+              "format": "date-time",
+              "description": "Award date",
+              "examples": ["2021-09-15T00:00:00-03:00"]
+            },
+            "awarder": {
+              "type": "string",
+              "description": "Award issuer"
+            }
+          },
+          "required": ["title", "date"]
+        }
+      },
+      "publications": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "Publication name"
+            },
+            "publisher": {
+              "type": "string",
+              "description": "Publisher name"
+            },
+            "releaseDate": {
+              "type": "string",
+              "format": "date-time",
+              "description": "Release date",
+              "examples": ["2021-09-15T00:00:00-03:00"]
+            },
+            "url": {
+              "type": "string",
+              "format": "uri",
+              "description": "Publication URL"
+            }
+          },
+          "required": ["name", "publisher", "releaseDate"]
+        }
+      },
+      "interests": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "Interest name"
+            },
+            "keywords": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          "required": ["name"]
+        }
+      },
+      "references": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "Reference name"
+            },
+            "reference": {
+              "type": "string",
+              "description": "Reference description"
+            }
+          },
+          "required": ["name"]
+        }
+      }
+    },
+    "required": ["meta", "basics", "work", "education"],
+    "additionalProperties": false
+  }

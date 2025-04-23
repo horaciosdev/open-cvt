@@ -1,0 +1,129 @@
+{
+  "meta": {
+    "formatVersion": "1.0.0",
+    "createdAt": "2024-04-15T16:41:14-03:00",
+    "updatedAt": "2025-04-16T10:32:00-03:00",
+    "language": "pt"
+  },
+  "basics": {
+    "name": "Horacio Silva",
+    "label": "Desenvolvedor Frontend",
+    "image": "https://example.com/photo.jpg",
+    "summary": "Desenvolvedor Frontend com mais de 5 anos de experiência em Next.js, TypeScript e Tailwind CSS. Focado em criar interfaces responsivas e de alta performance, integrando soluções PWA e otimizações de SEO. Experiência prática com MongoDB e estratégias de logging para análise de métricas de uso.",
+    "identifiers": [
+      {
+        "type": "CPF",
+        "value": "123.456.789-09"
+      },
+      {
+        "type": "Passport",
+        "value": "X1234567"
+      }
+    ],
+    "location": {
+      "address": "Rua Exemplo, 123",
+      "city": "Rio de Janeiro",
+      "region": "RJ",
+      "countryCode": "BR"
+    },
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "url": "https://linkedin.com/in/horaciosilva",
+        "username": "horacio-silva"
+      }
+    ]
+  },
+  "work": [
+    {
+      "organization": "Empresa Exemplo S.A.",
+      "position": "Desenvolvedor Frontend",
+      "url": "https://empresaexemplo.com",
+      "startDate": "2022-01-01T00:00:00-03:00",
+      "endDate": null,
+      "highlights": [
+        "Implementação de interface de busca por imagem usando Next.js e TypeScript",
+        "Refatoração de API interna para reduzir latência em 40%",
+        "Criação de PWA com caching avançado e notificações push"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "Universidade Federal do Rio de Janeiro",
+      "studyType": "Bachelor",
+      "area": "Ciência da Computação",
+      "startDate": "2018-02-01T00:00:00-03:00",
+      "endDate": "2021-12-01T23:59:59-03:00",
+      "courses": [
+        "CS101 - Introdução à Programação",
+        "CS201 - Estruturas de Dados e Algoritmos",
+        "CS301 - Desenvolvimento Web Avançado"
+      ],
+      "score": "4.0"
+    }
+  ],
+  "certifications": [
+    {
+      "name": "AWS Certified Solutions Architect",
+      "issuer": "Amazon Web Services",
+      "date": "2021-09-01T00:00:00-03:00",
+      "url": "https://aws.amazon.com/certification"
+    }
+  ],
+  "skills": [
+    {
+      "name": "React",
+      "category": "hard",
+      "keywords": [
+        "Next.js",
+        "TypeScript",
+        "Tailwind CSS",
+        "PWA"
+      ]
+    }
+  ],
+  "volunteer": [
+    {
+      "organization": "ONG Exemplo",
+      "position": "Coordenador de Voluntários",
+      "startDate": "2023-01-01T00:00:00-03:00",
+      "endDate": null,
+      "highlights": [
+        "Organização de eventos comunitários para arrecadação de doações",
+        "Captação de recursos e gestão de equipes de 20 voluntários"
+      ]
+    }
+  ],
+  "awards": [
+    {
+      "title": "Colaborador do Ano",
+      "date": "2023-12-01T00:00:00-03:00",
+      "awarder": "Grupo Imobiliário"
+    }
+  ],
+  "publications": [
+    {
+      "name": "Melhores Práticas em Frontend",
+      "publisher": "Tech Publishing",
+      "releaseDate": "2024-03-01T00:00:00-03:00",
+      "url": "https://techpublishing.com/publication"
+    }
+  ],
+  "interests": [
+    {
+      "name": "Inteligência Artificial",
+      "keywords": [
+        "Machine Learning",
+        "Redes Neurais",
+        "Visão Computacional"
+      ]
+    }
+  ],
+  "references": [
+    {
+      "name": "João Silva",
+      "reference": "Horacio é um profissional dedicado e comprometido, sempre excedendo expectativas em projetos de frontend."
+    }
+  ]
+}

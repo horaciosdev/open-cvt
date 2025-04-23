@@ -1,0 +1,14 @@
+{
+  "name": "John Doe",
+  "email": "john.doe@example.com",
+  "phone": "+1 (123) 456-7890",
+  "summary": "Experienced software developer",
+  "experiences": [
+    {
+      "company": "Tech Corp",
+      "position": "Senior Developer",
+      "startDate": "2020-01-01",
+      "endDate": "2023-12-31"
+    }
+  ]
+}
